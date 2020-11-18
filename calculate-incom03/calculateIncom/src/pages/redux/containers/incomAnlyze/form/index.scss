@@ -1,0 +1,15 @@
+// 收入分析头部表单样式信息
+.forms{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+    margin-bottom: 15px;
+    &>.next-select{
+        top: 9px;
+        margin-right: 15px;
+    }
+    &>.next-date-picker,.next-btn{
+        margin-right: 15px;
+    }
+}

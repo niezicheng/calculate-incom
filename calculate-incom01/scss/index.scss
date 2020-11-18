@@ -1,0 +1,372 @@
+//首页页面信息
+* {
+  margin: 0;
+  padding: 0;
+} 
+a{
+  text-decoration: none;
+}
+.container{
+  width: 90%;
+  height: 600px;
+  margin:0 auto;
+  font-size: #666;
+
+  // 头部信息
+  header{
+    width: 100%;
+    overflow: hidden;
+    //头部顶部信息
+    .header-top{
+      height: 30px;
+      background-color: #edffe9;
+      padding-top:8px;
+      font-size: 12px;
+      //头部左侧信息
+      .header-top-left{
+        float: left;
+        color: #8dd683;
+        margin-left:30px;
+      }
+      //头部右侧信息
+      .header-top-right{
+        float: right;
+        div{
+          margin-right: 15px;
+        }
+        //用户登录展示信息
+        .loginUser{
+          color: #8dd683;
+          display:inline-block;
+        }
+        //退出按钮信息
+        .loginOut{
+          color: #5ac1ee;
+          display:inline-block;
+        }
+      }
+    }
+      // 顶部导航栏
+      nav{
+        overflow: hidden;
+        padding-top: 10px;
+        clear: both;
+        position: relative;
+        hr{
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
+        ul{
+          overflow: hidden;
+          list-style: none;
+          li{
+            float: left;
+            width: 100px;
+            height: 30px;
+            text-align: center;
+            font-size: 14px;
+            line-height: 30px;
+            cursor: pointer;
+          }
+          .active{
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            border-bottom: 1px solid #fff;
+          }
+        }
+        
+      }
+  }
+
+  //页面内容区域
+  .content{
+    margin-top: 10px;
+    clear: both;
+    //计算器样式
+    .calculate-box{
+      // display: none;
+      width: 400px;
+      margin: 0 auto;
+      margin-top: 60px;
+      position: relative;
+      /* 计算器头部样式 */
+      .top{
+        height: 100px;
+        width: 400px;
+        background-color: #000;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+
+        /* 左部图标样式 */
+        .top-left{
+          width:20%;
+          span{
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            margin-left: 5px;
+            background-color: #ccc;
+          }
+        }
+        .top-left:hover .close{
+          background-color: brown;
+        }
+        .top-left:hover .shrink{
+          background-color: yellow;
+        }
+        top-left:hover .enlarge{
+          background-color: green;
+        }
+
+        /* 显示数据区域样式 */
+        .top-btm{
+          width: 100%;
+          height:78px;
+          color: #fff;
+          text-align: right;
+          position: relative;
+          //显示数据区域样式
+          .showData{
+            position:absolute;
+            right:10px;
+            bottom: 0;
+            font-size: 40px;
+          }
+        }
+      }
+      //计算器底部计算按钮区域
+      .bottom{
+        width: 100%;
+        /* 计算器底部样式 */
+        .line {
+          display: flex;
+          align-items: flex-start;
+        }
+        .item {
+          flex: 1;
+          height: 100px;
+          line-height: 100px;
+          text-align: center;
+          background-color: grey;
+          cursor: pointer;
+          border-bottom: 1px solid #000;
+          border-left: 1px solid #000;
+        }
+        .line .item:last-child{
+          border-right: 1px solid #000;       
+        }
+        .item-operate{
+          background-color: orange; 
+        }
+        .equal{
+          background-color: orange; 
+          border-bottom-right-radius: 5px;        
+        }
+        .item-speOperate {
+          background-color: darkgrey;
+        }
+        .zero {
+          flex: 2;
+          border-bottom-left-radius: 5px;
+        }
+      }
+      
+        //loading加载动画样式
+        .loading{
+          display: none;
+          width: 60px;
+          height: 60px;
+          position: absolute;
+          left: 173px;
+          top:250px;
+          span{
+            display: inline-block;
+            width: 15px;
+            height: 5px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            background: #aaa;
+            position: absolute;
+            animation: loading 0.8s ease infinite;
+          }
+          span:nth-child(1){
+            left: 0;
+            top: 50%;
+            margin-top:-5px;
+            animation-delay:0.05s;
+          }
+          span:nth-child(2){
+            left: 1px;
+            top: 18px;
+            transform: rotate(22.5deg);
+            animation-delay:0.1s;
+          }
+          span:nth-child(3){
+            left: 20px;
+            top: 12px;
+            margin-left: -15px;
+            transform: rotate(45deg);
+            animation-delay:0.15s;
+          }
+          span:nth-child(4){
+            left: 11px;
+            top: 7px;
+            transform: rotate(67.5deg);
+            animation-delay:0.2s;
+          }
+          span:nth-child(5){
+            left:32%;
+            top: 10px;
+            margin-top:-5px;
+            transform: rotate(90deg);
+            animation-delay:0.25s;
+          }
+          span:nth-child(6){
+            right: 18px;
+            top:7px;
+            transform: rotate(112.5deg);
+            animation-delay:0.3s;
+          }
+          span:nth-child(7){
+            top: 11px;
+            right: 12px;
+            margin-left: -15px;
+            transform: rotate(135deg);
+            animation-delay:0.35s;
+          }
+          span:nth-child(8){
+            top: 17px;
+            right: 8px;
+            transform: rotate(157.5deg);
+            animation-delay:0.4s;
+          }
+          span:nth-child(9){
+            top: 42%;
+            right: 7px;
+            transform: rotate(180deg);
+            animation-delay:0.45s;
+          }
+          span:nth-child(10){
+            right: 9px;
+            bottom: 23px;
+            transform: rotate(202.5deg);
+            animation-delay:0.5s;
+          }
+          span:nth-child(11){
+            right: 13px;
+            bottom: 17px;
+            margin-left: -15px;
+            transform: rotate(225deg);
+            animation-delay:0.55s;
+          }
+          span:nth-child(12){
+            right: 19px;
+              bottom: 13px;
+              transform: rotate(247.5deg);
+              animation-delay:0.6s;
+          }
+          span:nth-child(13){       
+            bottom: 12px;
+            left: 30%;
+            margin-top:-5px;
+            transform: rotate(270deg);
+            animation-delay:0.65s;
+          }
+          span:nth-child(14){          
+            bottom: 14px;
+            left: 11px;
+            transform: rotate(292.5deg);
+            animation-delay:0.7s;
+          }
+          span:nth-child(15){       
+            bottom: 18px;
+            left: 6px;
+            transform: rotate(315deg);
+            animation-delay:0.75s;
+          }  
+          span:nth-child(16){
+            bottom: 23px;
+            left: 2px;
+            transform: rotate(337.5deg);
+            animation-delay:0.8s;
+          }
+          @keyframes loading{
+            0%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0.2;
+            }
+          }
+        }
+    }
+
+
+    //收入分析页面内容展示样式
+    .income-anlyze{
+      display: none;
+      width: 100%;
+      //收入分析顶部表单控件及按钮样式
+      .income-anlyze-top{
+        height: 40px;
+        select{
+          width: 120px;
+          height: 25px;
+          margin-right: 15px;
+        }  
+        input{
+          height: 25px;
+          margin-right: 5px;
+        }
+        button{
+          width: 40px;
+          height: 23px;
+          margin-left: 15px;
+          background-color: #2998dd;
+          border-style: none;
+          cursor: pointer;
+        }
+        button.getTimeBtn{
+         background-color: #ccc; 
+        }
+        .lastGetTime{
+          margin-left: 5px;
+          display: inline-block;
+          font-size: 12px;
+        }
+      }
+      table{
+        width: 100%;
+        border-collapse: collapse;
+        tr{
+          border-bottom: 1px solid #ccc;
+          font-size: 12px;
+          line-height: 30px;
+          th,td{
+            text-align: center;
+            a{
+              color: #43b6e7;
+            }
+          }
+        }
+      }
+      //分页显示样式
+      .paging{
+        float: right;
+        width: 220px;
+        margin-top: 20px;
+        font-size: 14px;
+        span{
+          color: #43b6e7;
+          cursor: pointer;
+        }
+        .page-content{
+          color: #666;
+        }
+      }
+    }
+  }
+}

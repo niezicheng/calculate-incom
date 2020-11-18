@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>首页</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="./js/index.js"></script>
+</head>
+<body>
+  <!--  页面容器区域 -->
+  <div class="container">
+    <!-- 页面头部 -->
+    <header>
+      <!-- 头部上部显示信息 -->
+      <div class="header-top">
+        <!-- 左部攥言 -->
+        <div class="header-top-left">
+          展现个人风采，炫出异样情怀
+        </div>
+        <!-- 右部登录用户信息 -->
+        <div class="header-top-right">
+          <div class="loginUser">nzc</div>
+          <div class="loginOut"><a>退出</a></div>
+        </div>
+      </div>
+      <!-- 顶部导航栏 -->
+      <nav>
+        <ul>
+          <li class="active">首页</li>
+          <li>收入分析</li>
+        </ul>
+        <hr />
+      </nav>
+    </header>
+
+    <!-- 页面内容区域 -->
+    <div class="content">
+      <div class="calculate-box page">
+      <!-- 头部 start-->
+      <div class="top">
+          <!-- 左部功能图标 start-->
+          <div class="top-left">
+            <span class="close"></span>
+            <span class="shrink"></span>
+            <span class="enlarge"></span>
+          </div>
+          <!-- 左部功能图标 end -->
+          <!-- 底部显示数据区域 start -->
+          <div class="top-btm">
+            <div class="showData">
+              
+            </div>
+          </div>
+          <!-- 底部显示数据区域 end -->
+        </div>
+        <!-- 头部 end -->
+        <!-- 底部计算按钮区域 start -->
+        <div class="bottom">
+            <div class="line">
+                <div class="item item-speOperate delete">AC</div>
+                <div class="item item-speOperate negation">+/-</div>
+                <div class="item item-speOperate item-operate">%</div>
+                <div class="item item-operate">/</div>
+            </div>
+            <div class="line">
+                <div class="item item-num">7</div>
+                <div class="item item-num">8</div>
+                <div class="item item-num">9</div>
+                <div class="item item-operate">*</div>
+            </div>
+            <div class="line">
+                <div class="item item-num">4</div>
+                <div class="item item-num">5</div>
+                <div class="item item-num">6</div>
+                <div class="item item-operate">-</div>
+            </div>
+            <div class="line">
+                <div class="item item-num">1</div>
+                <div class="item item-num">2</div>
+                <div class="item item-num">3</div>
+                <div class="item item-operate">+</div>
+            </div>
+            <div class="line line-last">
+                <div class="item item-num zero">0</div>
+                <div class="item item-num">.</div>
+                <div class="item equal">=</div>
+            </div>
+        </div>
+        <!-- 底部计算按钮区域 end -->
+
+        <!-- loading加载动画 -->
+        <div class="loading">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <!-- 收入分析页面 -->
+      <div class="income-anlyze page">
+      <!-- 内容上部搜索表单元素及查询按钮 -->
+      <div class="income-anlyze-top">
+        <select name="" id="exchange">
+          <option value="">交易</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+        </select>
+        <select name="" id="pageSize">
+          <option value="">页条数</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        日期控件：
+        <input type="date" name="startTime" ／>
+        -
+        <input type="date" name="endTime" ／>
+        <button class="checkBtn">查询</button>
+        <button class="getTimeBtn">同步</button>
+        <div class="lastGetTime">
+          交易上次手动同步时间为：2019-09-20
+        </div>
+      </div>
+          <table>
+            <thead>
+              <tr>
+                  <th>日期</th>
+                  <th>付费人数</th>
+                  <th>免费人数</th>
+                  <th>客单价</th>
+                  <th>总收入</th>
+                  <th>到期(人)</th>
+                  <th>新订(单)</th>
+                  <th>续订(单)</th>
+                  <th>升级(单)</th>
+                  <th>后台(单)</th>
+                  <th>续订率</th>
+                  <th>一个月(单)</th>
+                  <th>一季度(单)</th>
+                  <th>半年(单)</th>
+                  <th>一年(单)</th>
+                  <th>来源</th>
+                </tr>
+            </thead>
+            <tbody>
+              <!-- 动态添加展示数据 -->
+            </tbody>
+          </table>
+          <!-- 分页展示按钮信息 -->
+          <div class="paging">
+            <span class="prevPage">上一页</span>
+            <span class='page-content'></span>
+            <span class="nextPage">下一页</span>
+          </div>
+        </div>
+    </div>
+      
+
+  </div>
+</body>
+</html>

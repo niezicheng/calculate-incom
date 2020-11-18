@@ -1,0 +1,17 @@
+//收入分析页面样式
+.incom-anlyze{
+    width: 90%;
+    margin: 0 auto;
+    &>.next-pagination{
+        float: right;
+        margin: 15px 50px 0 0;
+    }
+}
+.next-table td .next-table-cell-wrapper,.next-table th .next-table-cell-wrapper{
+    padding: 0;
+    margin: 0;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 12px;
+}

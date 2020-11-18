@@ -1,0 +1,284 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+.container {
+  width: 90%;
+  height: 600px;
+  margin: 0 auto;
+  font-size: #666; }
+  .container header {
+    width: 100%;
+    overflow: hidden; }
+    .container header .header-top {
+      height: 30px;
+      background-color: #edffe9;
+      padding-top: 8px;
+      font-size: 12px; }
+      .container header .header-top .header-top-left {
+        float: left;
+        color: #8dd683;
+        margin-left: 30px; }
+      .container header .header-top .header-top-right {
+        float: right; }
+        .container header .header-top .header-top-right div {
+          margin-right: 15px; }
+        .container header .header-top .header-top-right .loginUser {
+          color: #8dd683;
+          display: inline-block; }
+        .container header .header-top .header-top-right .loginOut {
+          color: #5ac1ee;
+          display: inline-block; }
+    .container header nav {
+      overflow: hidden;
+      padding-top: 10px;
+      clear: both;
+      position: relative; }
+      .container header nav hr {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        right: 0; }
+      .container header nav ul {
+        overflow: hidden;
+        list-style: none; }
+        .container header nav ul li {
+          float: left;
+          width: 100px;
+          height: 30px;
+          text-align: center;
+          font-size: 14px;
+          line-height: 30px;
+          cursor: pointer; }
+        .container header nav ul .active {
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          border-bottom: 1px solid #fff; }
+  .container .content {
+    margin-top: 10px;
+    clear: both; }
+    .container .content .calculate-box {
+      width: 400px;
+      margin: 0 auto;
+      margin-top: 60px;
+      position: relative;
+      /* 计算器头部样式 */ }
+      .container .content .calculate-box .top {
+        height: 100px;
+        width: 400px;
+        background-color: #000;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        /* 左部图标样式 */
+        /* 显示数据区域样式 */ }
+        .container .content .calculate-box .top .top-left {
+          width: 20%; }
+          .container .content .calculate-box .top .top-left span {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            margin-left: 5px;
+            background-color: #ccc; }
+        .container .content .calculate-box .top .top-left:hover .close {
+          background-color: brown; }
+        .container .content .calculate-box .top .top-left:hover .shrink {
+          background-color: yellow; }
+        .container .content .calculate-box .top top-left:hover .enlarge {
+          background-color: green; }
+        .container .content .calculate-box .top .top-btm {
+          width: 100%;
+          height: 78px;
+          color: #fff;
+          text-align: right;
+          position: relative; }
+          .container .content .calculate-box .top .top-btm .showData {
+            position: absolute;
+            right: 10px;
+            bottom: 0;
+            font-size: 40px; }
+      .container .content .calculate-box .bottom {
+        width: 100%;
+        /* 计算器底部样式 */ }
+        .container .content .calculate-box .bottom .line {
+          display: flex;
+          align-items: flex-start; }
+        .container .content .calculate-box .bottom .item {
+          flex: 1;
+          height: 100px;
+          line-height: 100px;
+          text-align: center;
+          background-color: grey;
+          cursor: pointer;
+          border-bottom: 1px solid #000;
+          border-left: 1px solid #000; }
+        .container .content .calculate-box .bottom .line .item:last-child {
+          border-right: 1px solid #000; }
+        .container .content .calculate-box .bottom .item-operate {
+          background-color: orange; }
+        .container .content .calculate-box .bottom .equal {
+          background-color: orange;
+          border-bottom-right-radius: 5px; }
+        .container .content .calculate-box .bottom .item-speOperate {
+          background-color: darkgrey; }
+        .container .content .calculate-box .bottom .zero {
+          flex: 2;
+          border-bottom-left-radius: 5px; }
+      .container .content .calculate-box .loading {
+        display: none;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        left: 173px;
+        top: 250px; }
+        .container .content .calculate-box .loading span {
+          display: inline-block;
+          width: 15px;
+          height: 5px;
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+          background: #aaa;
+          position: absolute;
+          animation: loading 0.8s ease infinite; }
+        .container .content .calculate-box .loading span:nth-child(1) {
+          left: 0;
+          top: 50%;
+          margin-top: -5px;
+          animation-delay: 0.05s; }
+        .container .content .calculate-box .loading span:nth-child(2) {
+          left: 1px;
+          top: 18px;
+          transform: rotate(22.5deg);
+          animation-delay: 0.1s; }
+        .container .content .calculate-box .loading span:nth-child(3) {
+          left: 20px;
+          top: 12px;
+          margin-left: -15px;
+          transform: rotate(45deg);
+          animation-delay: 0.15s; }
+        .container .content .calculate-box .loading span:nth-child(4) {
+          left: 11px;
+          top: 7px;
+          transform: rotate(67.5deg);
+          animation-delay: 0.2s; }
+        .container .content .calculate-box .loading span:nth-child(5) {
+          left: 32%;
+          top: 10px;
+          margin-top: -5px;
+          transform: rotate(90deg);
+          animation-delay: 0.25s; }
+        .container .content .calculate-box .loading span:nth-child(6) {
+          right: 18px;
+          top: 7px;
+          transform: rotate(112.5deg);
+          animation-delay: 0.3s; }
+        .container .content .calculate-box .loading span:nth-child(7) {
+          top: 11px;
+          right: 12px;
+          margin-left: -15px;
+          transform: rotate(135deg);
+          animation-delay: 0.35s; }
+        .container .content .calculate-box .loading span:nth-child(8) {
+          top: 17px;
+          right: 8px;
+          transform: rotate(157.5deg);
+          animation-delay: 0.4s; }
+        .container .content .calculate-box .loading span:nth-child(9) {
+          top: 42%;
+          right: 7px;
+          transform: rotate(180deg);
+          animation-delay: 0.45s; }
+        .container .content .calculate-box .loading span:nth-child(10) {
+          right: 9px;
+          bottom: 23px;
+          transform: rotate(202.5deg);
+          animation-delay: 0.5s; }
+        .container .content .calculate-box .loading span:nth-child(11) {
+          right: 13px;
+          bottom: 17px;
+          margin-left: -15px;
+          transform: rotate(225deg);
+          animation-delay: 0.55s; }
+        .container .content .calculate-box .loading span:nth-child(12) {
+          right: 19px;
+          bottom: 13px;
+          transform: rotate(247.5deg);
+          animation-delay: 0.6s; }
+        .container .content .calculate-box .loading span:nth-child(13) {
+          bottom: 12px;
+          left: 30%;
+          margin-top: -5px;
+          transform: rotate(270deg);
+          animation-delay: 0.65s; }
+        .container .content .calculate-box .loading span:nth-child(14) {
+          bottom: 14px;
+          left: 11px;
+          transform: rotate(292.5deg);
+          animation-delay: 0.7s; }
+        .container .content .calculate-box .loading span:nth-child(15) {
+          bottom: 18px;
+          left: 6px;
+          transform: rotate(315deg);
+          animation-delay: 0.75s; }
+        .container .content .calculate-box .loading span:nth-child(16) {
+          bottom: 23px;
+          left: 2px;
+          transform: rotate(337.5deg);
+          animation-delay: 0.8s; }
+@keyframes loading {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0.2; } }
+    .container .content .income-anlyze {
+      display: none;
+      width: 100%; }
+      .container .content .income-anlyze .income-anlyze-top {
+        height: 40px; }
+        .container .content .income-anlyze .income-anlyze-top select {
+          width: 120px;
+          height: 25px;
+          margin-right: 15px; }
+        .container .content .income-anlyze .income-anlyze-top input {
+          height: 25px;
+          margin-right: 5px; }
+        .container .content .income-anlyze .income-anlyze-top button {
+          width: 40px;
+          height: 23px;
+          margin-left: 15px;
+          background-color: #2998dd;
+          border-style: none;
+          cursor: pointer; }
+        .container .content .income-anlyze .income-anlyze-top button.getTimeBtn {
+          background-color: #ccc; }
+        .container .content .income-anlyze .income-anlyze-top .lastGetTime {
+          margin-left: 5px;
+          display: inline-block;
+          font-size: 12px; }
+      .container .content .income-anlyze table {
+        width: 100%;
+        border-collapse: collapse; }
+        .container .content .income-anlyze table tr {
+          border-bottom: 1px solid #ccc;
+          font-size: 12px;
+          line-height: 30px; }
+          .container .content .income-anlyze table tr th, .container .content .income-anlyze table tr td {
+            text-align: center; }
+            .container .content .income-anlyze table tr th a, .container .content .income-anlyze table tr td a {
+              color: #43b6e7; }
+      .container .content .income-anlyze .paging {
+        float: right;
+        width: 220px;
+        margin-top: 20px;
+        font-size: 14px; }
+        .container .content .income-anlyze .paging span {
+          color: #43b6e7;
+          cursor: pointer; }
+        .container .content .income-anlyze .paging .page-content {
+          color: #666; }
+
+/*# sourceMappingURL=index.css.map */
